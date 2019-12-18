@@ -8,15 +8,11 @@
     padding: 2em;
 }
 
-.header div{
-    display: flex;
-}
 
 .logo{
     font-family: 'Kaushan Script';
     font-weight: bold;
     font-size: 3em;
-    width: 50%;
 }
 
 .logo .first{
@@ -27,13 +23,10 @@
     color: #36525b;
 }
 
-.sort-form{
-    width: 40%;
-    float: right;
-}
-
-.sort-form div{
+.sort-form-div{
+    width: 80%;
     display: flex;
+    float: right;
 }
 
 .select{
@@ -67,6 +60,7 @@
 
 .header-line{
     border: 1px solid #36525b;
+    width: 100%;
 }
 
 .header-intro{
@@ -82,3 +76,61 @@ button:focus, select:focus{
 }
 
 /* end of header */
+
+
+/* The beginning of product card */
+.product-card{
+    padding: 1%;
+}
+
+.product-card .inner-container{
+    background-color: #e9ebec;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+.inner-container .date{
+    float: right;
+    margin-right: 10%;
+    margin-top: 3em;
+}
+
+.image{
+    background-color: #fff;
+    width: 80%;
+    margin-left: 10%;
+    padding: 10%;
+}
+
+.image p{
+    text-align: center;
+    font-family: 'Bree Serif';
+}
+
+.data{
+    margin-left: 10%;
+    margin-top: 8%;
+    width: 80%;
+}
+
+.product-data{
+    font-size: 0.9em;
+    font-family: 'Bree Serif';
+    font-weight: bold;
+}
+
+.product-data span{
+    font-weight: normal;
+    font-style: italic;
+    color: #36525b;
+}
+
+.date{
+    font-size: 0.5em;
+}
+
+.to-cart{
+    margin-top: 1.5em;
+}
+
+/* The end of product card */
