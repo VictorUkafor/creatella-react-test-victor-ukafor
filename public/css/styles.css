@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* beginning of header */
+.header{
+    padding: 2em;
+}
+
+.header div{
+    display: flex;
+}
+
+.logo{
+    font-family: 'Kaushan Script';
+    font-weight: bold;
+    font-size: 3em;
+    width: 50%;
+}
+
+.logo .first{
+    color: #f68b1f;
+}
+
+.logo .second{
+    color: #36525b;
+}
+
+.sort-form{
+    width: 40%;
+    float: right;
+}
+
+.sort-form div{
+    display: flex;
+}
+
+.select{
+    width: 70%;
+}
+
+.sort-select{
+    border-radius: 0;
+    outline: none;
+    font-family: Alegreya;
+    border: 1px solid #36525b;
+}
+
+.go-button{
+    border-radius: 0;
+    background-color: #f68b1f;
+    border: 1px solid #f68b1f;
+    outline: none;
+    color: #fff;
+    font-family: Alegreya;
+}
+
+.go-button:hover, .go-button:focus{
+    background-color: #f68b1f;
+    border: 1px solid #f68b1f;
+    opacity: 0.8;
+    outline: none;
+    color: #fff;
+    font-family: Alegreya;
+}
+
+.header-line{
+    border: 1px solid #36525b;
+}
+
+.header-intro{
+    font-family: 'Bree Serif';
+    font-size: 1.4em;
+    padding-right: 10%;
+    padding-left: 10%;
+    text-align: center;
+}
+
+button:focus, select:focus{
+    outline: none;
+}
+
+/* end of header */
