@@ -134,10 +134,20 @@ button:focus, select:focus{
 
 /* The end of product card */
 
-
+/* for bootstrap spinner */
 .loader{
     width: 10em;
     height: 10em;
     margin-left: 40%;
     margin-top: 5em;
+}
+
+
+/* styling for ad div */
+.ad-box{
+    width: 100%;
+    text-align: center;
+    background-color: #f0f0f1;
+    margin: 2em 0;
+    padding: 2em 5em;
 }
