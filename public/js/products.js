@@ -1,3 +1,5 @@
+// import timeConverter from './libs';
+
 
 // product component
 const Product = (props) => {
@@ -15,11 +17,11 @@ const Product = (props) => {
             
             {/* display the info ascii image */}
             <div className="data">
-                <h5 className="product-data">#{id}</h5>
+                <h5 className="product-data">#<span>{id}</span></h5>
                 <h5 className="product-data">Size: <span>{size}px</span></h5>
                 <h5 className="product-data">Price: <span>${price/100}</span></h5>
-                <h5 className="product-data">Date Added : <span>{date}</span></h5>
-                <a href="#" className="btn btn-block go-button to-cart">Add to Cart</a>
+                <h5 className="product-data">Date Added: <span>{timeConverter(date)}</span></h5>
+                <a href="#" className="btn btn-block go-button to-cart shadow-none">Add to Cart</a>
             </div>
         </div>
     </div>);
