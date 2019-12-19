@@ -1,3 +1,5 @@
+// import timeConverter from './libs';
+
 
 // product component
 const Product = (props) => {
@@ -15,11 +17,11 @@ const Product = (props) => {
             
             {/* display the info ascii image */}
             <div className="data">
-                <h5 className="product-data">#{id}</h5>
+                <h5 className="product-data">#<span>{id}</span></h5>
                 <h5 className="product-data">Size: <span>{size}px</span></h5>
                 <h5 className="product-data">Price: <span>${price/100}</span></h5>
-                <h5 className="product-data">Date Added : <span>{date}</span></h5>
-                <a href="#" className="btn btn-block go-button to-cart">Add to Cart</a>
+                <h5 className="product-data">Date Added: <span>{timeConverter(date)}</span></h5>
+                <a href="#" className="btn btn-block go-button to-cart shadow-none">Add to Cart</a>
             </div>
         </div>
     </div>);
@@ -30,6 +32,7 @@ class Products extends React.Component {
     state = { 
         loading: false,
         products: [],
+        adverts: [],
     }
 
     // run after dom has mounted
@@ -59,6 +62,33 @@ class Products extends React.Component {
         } 
     }
 
+
+    // for generating a random number
+    // not included in the adverts array
+    generateRandom = () => {
+        const { adverts } = this.state;
+
+        for(let i = 0; i < 1000; i++){
+            let randomNumber = Math.floor(Math.random() * 1000);
+            if(!adverts.includes(randomNumber)){
+                adverts.push(randomNumber);
+                return randomNumber;
+            }
+            else
+            i--;
+        }
+    }
+
+
+    // markup for advert
+    advertFromSponsors = () => {
+        return (<div className="ad-box">
+            <img className="ad" 
+            src={`/ads/?r=${this.generateRandom()}`} />
+            </div>)
+    }
+
+
     render() {
         const { loading, products } = this.state;
 
@@ -66,7 +96,14 @@ class Products extends React.Component {
         <div className="container">
             <div className="row">
                 {loading ? (<div class="spinner-border loader"></div>) :
-                products.map((product) => <Product product={product}/>)}
+                products.map((product, index) => {
+                    if(index + 1 === 20){
+                        return (<><Product product={product}/>
+                    {this.advertFromSponsors()}</>)
+                    }
+
+                return (<Product product={product}/>)
+                })}
             </div>
         </div>)
     };

@@ -15,6 +15,7 @@ const options = [
 ];
 
 
+
 // header component
 class Header extends React.Component {
     state = { sort: '' };
@@ -59,14 +60,14 @@ class Header extends React.Component {
                 <div className="form-row align-items-center sort-form-div">
                     <div className="col-auto my-1 select">
                         <select value={sort} onChange={this.handleChange} 
-                        className="custom-select mr-sm-2 sort-select">
+                        className="custom-select mr-sm-2 sort-select shadow-none">
                             {options.map((option) => 
                             <option {...option.value === sortingValue ? 'selected' : ''} 
                             value={option.value}>{option.name}</option>)}
                         </select>
                     </div>
                    <div className="">
-                        <button type="submit" className="btn go-button">Go</button>
+                        <button type="submit" className="btn go-button shadow-none">Go</button>
                    </div>
                 </div>
             </form>
