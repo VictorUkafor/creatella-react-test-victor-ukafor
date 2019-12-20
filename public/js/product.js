@@ -8,19 +8,20 @@ class Product extends React.Component {
     }
 
 
+    // when user clicks on the 'add to cart' button
     addToCart = () => {
         this.setState({ addedToCart: true });
     }
     
+    
     render(){    
-        
         const { 
             product: { id, size, price, face, date } 
         } = this.props;
 
         const { addedToCart } = this.state;
 
-          return (
+    return (
     <div className="product-card col-xs-6 col-md-3 col-sm-4">
         <div className="inner-container">
             
