@@ -26,4 +26,4 @@ class Body extends React.Component {
 
 }
 
-ReactDOM.render(<Body />, document.querySelector('body'));
+ReactDOM.render(<Body />, document.querySelector('#root'));

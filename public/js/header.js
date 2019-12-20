@@ -1,5 +1,5 @@
 // data for select field options
-const options = [
+const selectOptions = [
     {
         name: 'Sort by ID',
         value: 'id'
@@ -18,7 +18,10 @@ const options = [
 
 // header component
 class Header extends React.Component {
-    state = { sort: '' };
+    state = { 
+        sort: '' ,
+        options: selectOptions  
+    };
 
     // for sending state sort to parent component
     selectSortingValue = () => {
@@ -41,7 +44,7 @@ class Header extends React.Component {
     render(){
         const { 
             props: { sortingValue },
-            state: { sort }
+            state: { sort, options }
         } = this;    
 
     return (
@@ -61,8 +64,8 @@ class Header extends React.Component {
                     <div className="col-auto my-1 select">
                         <select value={sort} onChange={this.handleChange} 
                         className="custom-select mr-sm-2 sort-select shadow-none">
-                            {options.map((option) => 
-                            <option {...option.value === sortingValue ? 'selected' : ''} 
+                            {options.map((option, index) => 
+                            <option key={index}  
                             value={option.value}>{option.name}</option>)}
                         </select>
                     </div>

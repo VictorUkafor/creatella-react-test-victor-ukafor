@@ -151,3 +151,31 @@ button:focus, select:focus{
     margin: 2em 0;
     padding: 2em 5em;
 }
+
+
+.scroll-loader{
+    margin-bottom: 2em;
+    width: 100%;
+}
+
+.btn-scroll{
+    width: 40%;
+    margin-left: 30%;
+    border-radius: 0;
+    background-color: #36525b;
+}
+
+.catalogue-end{
+    text-align: center;
+    width: 40%;
+    margin-left: 30%;
+    background-color: #f68b1f;
+    color: #fff;
+    font-family: Lori;
+    margin-bottom: 2em;
+}
+
+.added-to-cart{
+    background-color: #36525b;
+    border: 1px solid #36525b;
+}

@@ -14,7 +14,7 @@ const timeConverter = (time) => {
     // convert time less than to relative format
     switch(true){
         case (dateInSecs < 60):
-            relativeTime = `${dateInSecs || 1} 
+            relativeTime = `${dateInSecs} 
             second${(dateInSecs > 1) ? 's' : ''} ago`;
             break; 
         case (dateInSecs < (60*60)):
